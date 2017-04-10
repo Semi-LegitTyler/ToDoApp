@@ -13,6 +13,7 @@
 		01F61BEC1E99E38600AAF8FF /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01F61BEA1E99E38600AAF8FF /* ToDo.xcdatamodeld */; };
 		01F61BEE1E99E38600AAF8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F61BED1E99E38600AAF8FF /* Assets.xcassets */; };
 		01F61BF11E99E38600AAF8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F61BEF1E99E38600AAF8FF /* LaunchScreen.storyboard */; };
+		01F61BF91E9BDEC000AAF8FF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F61BF81E9BDEC000AAF8FF /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		01F61BED1E99E38600AAF8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F61BF01E99E38600AAF8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01F61BF21E99E38600AAF8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F61BF81E9BDEC000AAF8FF /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				01F61BE31E99E38600AAF8FF /* AppDelegate.swift */,
 				01F61BE51E99E38600AAF8FF /* ViewController.swift */,
 				01F61BE71E99E38600AAF8FF /* Main.storyboard */,
+				01F61BF81E9BDEC000AAF8FF /* Task.swift */,
 				01F61BED1E99E38600AAF8FF /* Assets.xcassets */,
 				01F61BEF1E99E38600AAF8FF /* LaunchScreen.storyboard */,
 				01F61BF21E99E38600AAF8FF /* Info.plist */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F61BF91E9BDEC000AAF8FF /* Task.swift in Sources */,
 				01F61BE61E99E38600AAF8FF /* ViewController.swift in Sources */,
 				01F61BEC1E99E38600AAF8FF /* ToDo.xcdatamodeld in Sources */,
 				01F61BE41E99E38600AAF8FF /* AppDelegate.swift in Sources */,
