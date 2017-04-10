@@ -91,7 +91,7 @@
                                 <rect key="frame" x="172" y="332" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addTapped:" destination="sXP-pt-bP6" eventType="touchUpInside" id="iZh-kc-brq"/>
+                                    <action selector="addTaskButton:" destination="sXP-pt-bP6" eventType="touchUpInside" id="RvJ-TJ-Vmw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,9 +110,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addTaskButton" destination="ymR-q5-MDf" id="KMM-MX-Jdv"/>
                         <outlet property="importantSwitch" destination="nEj-TA-cir" id="7oc-9z-eAd"/>
-                        <outlet property="taskNameLabel" destination="AmP-cN-h7z" id="Lti-xg-o3o"/>
                         <outlet property="taskNameText" destination="oEx-Mg-GdI" id="BHf-OT-xAR"/>
                     </connections>
                 </viewController>

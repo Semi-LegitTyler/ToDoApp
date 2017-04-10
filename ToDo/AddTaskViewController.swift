@@ -9,12 +9,13 @@
 import UIKit
 
 class AddTaskViewController: UIViewController {
-
-    @IBOutlet weak var taskNameLabel: UILabel!
     
     @IBOutlet weak var taskNameText: UITextField!
     
     @IBOutlet weak var importantSwitch: UISwitch!
+    
+    var previousVC = ViewController()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +23,13 @@ class AddTaskViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    
-    @IBAction func addTapped(_ sender: Any) {
+    @IBAction func addTaskButton(_ sender: Any) {
+        //Creates a new task based on outlet info
+        
+        let task = Task()
+        task.name = taskNameText.text!
+        task.importance = importantSwitch.isOn
+        
     }
     
     
@@ -32,5 +38,8 @@ class AddTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
 
 }
