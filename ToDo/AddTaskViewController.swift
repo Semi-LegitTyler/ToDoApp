@@ -30,6 +30,9 @@ class AddTaskViewController: UIViewController {
         task.name = taskNameText.text!
         task.importance = importantSwitch.isOn
         
+        previousVC.tasks.append(task)
+        previousVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
     }
     
     
@@ -38,8 +41,6 @@ class AddTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
-    }
+    
 
 }
