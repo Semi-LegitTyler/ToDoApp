@@ -60,5 +60,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return [task1,task2]
     }
+    
+    @IBAction func addTapped(_ sender: Any) {
+        performSegue(withIdentifier: "addTaskSegue", sender: nil)
+    }
+    
 }
 

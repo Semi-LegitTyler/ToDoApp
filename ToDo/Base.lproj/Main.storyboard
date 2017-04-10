@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--To Do-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,14 +34,40 @@
                             <constraint firstAttribute="trailing" secondItem="RWf-Ce-ZJo" secondAttribute="trailing" id="yPg-6y-sFl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="eRb-QB-Hx5"/>
+                    <navigationItem key="navigationItem" title="To Do" id="eRb-QB-Hx5">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="USX-RX-wRN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="POA-5q-FVh">
+                            <connections>
+                                <action selector="addTapped:" destination="BYZ-38-t0r" id="7AL-NX-abZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RWf-Ce-ZJo" id="S5L-Jk-FjM"/>
+                        <segue destination="sXP-pt-bP6" kind="show" identifier="addTaskSegue" id="Cfv-TD-wW6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="676" y="-546"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mk1-TK-Kj9">
+            <objects>
+                <viewController id="sXP-pt-bP6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ww7-FV-Pci"/>
+                        <viewControllerLayoutGuide type="bottom" id="b9m-Wk-YfL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q9T-t3-F1M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXM-bL-4Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="-839"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2gq-aa-wAM">
