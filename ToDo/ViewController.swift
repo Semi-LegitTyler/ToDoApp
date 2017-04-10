@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     var tasks: [Task] = []
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return tasks.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "deleteTaskSegue", sender: task)
+        
+        
+    }
+    
     func makeTasks() -> [Task] {
         let task1 = Task()
         task1.name = "Finish an App"
@@ -66,8 +75,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextVC = segue.destination as! AddTaskViewController
-        nextVC.previousVC = self
+        if segue.identifier == "addTaskSegue" {
+            let nextVC = segue.destination as! AddTaskViewController
+            nextVC.previousVC = self
+        }
+        if segue.identifier == "deleteTaskSegue" {
+            let nextVC = segue.destination as! CompleteTaskViewController
+            nextVC.task = sender as! Task
+            nextVC.previousVC = self
+        }
     }
     
 }
