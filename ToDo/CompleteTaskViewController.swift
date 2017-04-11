@@ -10,24 +10,28 @@ import UIKit
 
 class CompleteTaskViewController: UIViewController {
 
-    var previousVC = ViewController()
-    var task = Task()
+    var task : Task? = nil
     
     @IBOutlet weak var taskLabel: UILabel!
-    
-    @IBAction func completeButton(_ sender: Any) {
-        previousVC.tasks.remove(at: previousVC.selectedIndex)
-        previousVC.tableView.reloadData()
-        navigationController?.popViewController(animated: true)
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        taskLabel.text = task.name
+        taskLabel.text = task!.name!
+    }
+    
+    @IBAction func completeButton(_ sender: Any) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(task!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        navigationController?.popViewController(animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {

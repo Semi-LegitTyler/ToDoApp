@@ -14,8 +14,6 @@ class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var importantSwitch: UISwitch!
     
-    var previousVC = ViewController()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +24,15 @@ class AddTaskViewController: UIViewController {
     @IBAction func addTaskButton(_ sender: Any) {
         //Creates a new task based on outlet info
         
-        let task = Task()
-        task.name = taskNameText.text!
-        task.importance = importantSwitch.isOn
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        previousVC.tasks.append(task)
-        previousVC.tableView.reloadData()
+        let task = Task(context: context)
+        
+        task.name = taskNameText.text!
+        task.important = importantSwitch.isOn
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         navigationController?.popViewController(animated: true)
     }
     
